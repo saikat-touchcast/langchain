@@ -39,6 +39,9 @@ if TYPE_CHECKING:
     from langchain_community.chat_models.bedrock import (
         BedrockChat,
     )
+    from langchain_community.chat_models.cogcache import (
+        ChatCogCache,
+    )
     from langchain_community.chat_models.cohere import (
         ChatCohere,
     )
@@ -252,6 +255,7 @@ __all__ = [
     "SolarChat",
     "VolcEngineMaasChat",
     "ChatYi",
+    "ChatCogCache",
 ]
 
 
@@ -317,6 +321,7 @@ _module_lookup = {
     "ChatPremAI": "langchain_community.chat_models.premai",
     "ChatLlamaCpp": "langchain_community.chat_models.llamacpp",
     "ChatYi": "langchain_community.chat_models.yi",
+    "ChatCogCache": "langchain_community.chat_models.cogcache",
 }
 
 
