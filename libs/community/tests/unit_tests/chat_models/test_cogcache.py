@@ -26,21 +26,21 @@ def test_cogcache_model_param() -> None:
             assert llm.api_key.get_secret_value() == "foo", "API key should be 'foo'"
 
 
-def test__convert_dict_to_message_human() -> None:
+def test_convert_dict_to_message_human() -> None:
     message = {"role": "user", "content": "foo"}
     result = _convert_dict_to_message(message)
     expected_output = HumanMessage(content="foo")
     assert result == expected_output
 
 
-def test__convert_dict_to_message_ai() -> None:
+def test_convert_dict_to_message_ai() -> None:
     message = {"role": "assistant", "content": "foo"}
     result = _convert_dict_to_message(message)
     expected_output = AIMessage(content="foo")
     assert result == expected_output
 
 
-def test__convert_dict_to_message_system() -> None:
+def test_convert_dict_to_message_system() -> None:
     message = {"role": "system", "content": "foo"}
     result = _convert_dict_to_message(message)
     expected_output = ChatMessage(content="foo", role="system")
